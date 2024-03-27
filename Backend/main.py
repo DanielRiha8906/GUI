@@ -5,11 +5,11 @@ from sqlalchemy.orm import Session
 import models
 from typing import Annotated, List
 from fastapi.middleware.cors import CORSMiddleware
-import auth
-from auth import get_current_user
+from auth import *
+# from auth import get_current_user
 
 app = FastAPI()
-app.include_router(auth.router)
+app.include_router(router)
 
 origins = [
     "http://localhost:3000"
