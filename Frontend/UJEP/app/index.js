@@ -2,13 +2,16 @@ import { router } from 'expo-router';
 import React, { useState } from 'react';
 import { View, TextInput, Button } from 'react-native';
 
+// export main function, which will give us a login screen
 const Login = () => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
-
+// button for testing purposes. Utilizing router to push it to home adress
   const bypass = () => {
     router.push('/home');
   }
+  // Async Function, which specifies in which format the data I have recieved will be,
+  // It awaits connection to get server from server,
   const handleLogin = async () => {
     const options = {
       method: 'POST',

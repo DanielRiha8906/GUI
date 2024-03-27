@@ -2,6 +2,7 @@ import { router } from 'expo-router';
 import React, { useEffect, useState } from 'react';
 import { View, Text, Button, TextInput } from 'react-native';
 import {SafeAreaProvider } from 'react-native-safe-area-context';
+// Main page which will constantly show us all data, that have been pushed to it.
 
 const App = () => {
   const [data, setData] = useState([]);
@@ -26,9 +27,12 @@ const App = () => {
         setData(responseData);
       })
       .catch((error) => console.log(error));
+      // the [data] component is really important, otherwise it would reload constantly
   }, [data]);
 
   return (
+    // Safe Area Provider is for the text, to not get out of screen, if you post a long review, or the song is long, it will mash the text together,
+    // Could be implemented better, but this is the only way I found.
     <SafeAreaProvider >
     <View style={{ flex: 1 }} >
           {data.map((item, index) => {

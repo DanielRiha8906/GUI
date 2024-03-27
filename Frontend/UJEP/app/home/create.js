@@ -7,6 +7,7 @@ const Login = () => {
   const [songName, setSongName] = useState('');
   const [ArtistName, setArtistName] = useState('');
   const [reviewText, setReviewText] = useState('');
+// Async function, wait 'till it get's response from server, if everything is alright, it pushes you to /home
 
   const createReview = async () => {
     const options = {
