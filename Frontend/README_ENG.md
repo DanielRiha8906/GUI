@@ -83,7 +83,7 @@ Here is an easy 'Hello World!' type of example.
 
 ## Variables
 
-JavaScript is a dynamically typed language. There are three types of variables: 'var', 'let', and 'const', which must always be declared before they are used.
+JavaScript is a dynamically typed language. There are three types of variables: 'var', 'let', and 'const', which always must be declared before they are used.
 
 var: It is always global, can be redeclared, and its value can be changed.
 let: It is block-scoped, cannot be redeclared, and its value can be changed.
@@ -120,7 +120,7 @@ export default Ujep;
 ## Use state
 
 
-An important concept for user input, text changing, button functionality, and similar functionalities is something called "state."
+An important concept for user input, text changing, button functionality, and similiar functionalities is something called "state."
 
 In React Native, "state" is an object that holds data and determines how a particular component behaves and looks at a certain time. Each component can have its own state. State is used to store data that may change over time and affect the appearance and behavior of the component.
 
@@ -725,10 +725,10 @@ If we have time left, I'll show you a project I worked on for Dr. Fišer and Dr.
 
 Create a mobile application that supports ad-hoc communication, with two sides - student and teacher.
 
-Teacher - on their side, they will have an interface showing which student is present in the class, potentially able to manually add students and give them a + when they are active. (still a Work in Progress)
+Teacher - on their side, they will have an interface showing which student is present in the class, potentially be able to manually add students and give them a + when they are active. (still a Work in Progress)
 
 Student - logs in using the mobile app and scans the QR code of the chair they are sitting on, which will be recorded in the teacher's database.
 
-[Link to Repository](https://github.com/DanielRiha8906/APR2_projekt)
+[Link to the Repository](https://github.com/DanielRiha8906/APR2_projekt)
 
 # Thank you very much for your attention, enjoy your lunch!
