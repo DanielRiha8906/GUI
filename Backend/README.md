@@ -97,8 +97,8 @@ models.Base.metadata.create_all(bind=engine)```
     finally:
         db.close()
    ```
-* Závislost: ```db_dependency = Annotated[Session, Depends(get_db)```
-<br>
+* Závislost:
+```db_dependency = Annotated[Session, Depends(get_db)```. 
 Celý kód:
 ```python
 from fastapi import FastAPI, Depends
