@@ -18,7 +18,7 @@ It's possible that the mobile app might not work on school computers, so if you'
 
 ## Documentation + teaching materials
 
-[Official documentation](https://reactnative.dev/docs/getting-started) is here.
+Official documentation is [here](https://reactnative.dev/docs/getting-started).
 
 Videos I have used for studying this framework are here:
  
@@ -34,11 +34,21 @@ In your working directory in which you would like to develop, please type this i
 npm create-expo-app jmeno_appky
 ```
 Here is how Android studio should look like when you launch it.
-<img src="https://raw.githubusercontent.com/DanielRiha8906/GUI/main/images/Android.png"/>
+
+
+<img src="https://raw.githubusercontent.com/DanielRiha8906/GUI/main/Frontend/images/Android.png">
+
+
 Please click on more actions and manage virtual device
-<img src="https://raw.githubusercontent.com/DanielRiha8906/GUI/main/images/more_actions.png"/>
+
+<img src="https://raw.githubusercontent.com/DanielRiha8906/GUI/main/Frontend/images/more_actions.png">
+
+
 Click the "play" button 
-<img src="https://raw.githubusercontent.com/DanielRiha8906/GUI/main/images/sum.png" />
+
+
+<img src="https://raw.githubusercontent.com/DanielRiha8906/GUI/main/Frontend/images/sum.png">
+
 
 ## Components
 Now let's get started with some work. React Native operates on a component-based system, where components are displayed differently for Android, iOS, and web. Today, we'll be using View, Text, Image, and TextInput components.
