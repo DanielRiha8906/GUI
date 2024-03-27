@@ -716,4 +716,4 @@ Studnet - Se přihlásí pomocí mobilní aplikace a načte si QR kód židle, n
 [Odkaz na Repo](https://github.com/DanielRiha8906/APR2_projekt)
 
 
-#Děkuji moc za pozornost, užijte si oběd!
+# Děkuji moc za pozornost, užijte si oběd!
