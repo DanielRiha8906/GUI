@@ -26,8 +26,7 @@ from sqlalchemy.ext.declarative import declarative_base
 ```
 
 * Definujeme adresu databáze<br>
-```python
-DATABASE_URL = "sqlite:///./music_reviews_app.db"```
+```DATABASE_URL = "sqlite:///./music_reviews_app.db"```
 
 * Vytvaříme instance tříd Engine, Session a Base pro práci s databází
 ```
