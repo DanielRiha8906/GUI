@@ -1,44 +1,59 @@
+
 # GUI
 
-## Co to je React native?
+## What is React Native?
 
-React Native je open-source framework, který umožňuje uživatelům vytvářet nativní aplikace, které využívají JavaScript a React. Je velmi populární s hodně supportem, za vývojem stojí Meta Platforms, Inc.
-Tudíž jsou v tom napsané weby a aplikace typu Facebook, Instagram a WhatsUp. 
+React Native is an open-source framework that enables users to create native applications using JavaScript and React. It is very popular with a lot of support, developed by Meta Platforms, Inc. Therefore, websites and applications like Facebook, Instagram, and WhatsApp are built with it.
 
-## Proč se to využívá?
-React native umožňuje vývojářům udělat kód jednou a pak ho využít v rámci více platforem - Ať už je to Android, IOS, Webovky.
+## Why should I use it?
 
-## Začátek projektu 
-K dnešní práci budete potřebovat [node](https://nodejs.org/en/download/current)
-Poté buď aplikaci [Expo go](https://expo.dev/go) na mobilech (Google store, Apple store) nebo [Android Studio](https://developer.android.com/studio) pro práci na počítači.
+React Native allows developers to write code once and then use it across multiple platforms, whether it's Android, iOS, or web applications.
 
-Je možné, že vám to na školních počítačích nebude fungovat s mobilní aplikací, tudíž zdali jste na školních počítačích prosím využívejte Android Studio. Pro ukázku ho budu využívat i já.
+## How to Begin?
 
-## Dokumentace + materiály 
-[Oficiální dokumentace](https://reactnative.dev/docs/getting-started) je tady.
-Popřípadě videa, které jsem využil na dnešní projekt: 
+
+For today's work, you will need [Node.js](https://nodejs.org/en/download/current). After that, you can either use the [Expo go](https://expo.dev/go) mobile app (available on Google Play Store and Apple App Store) or [Android Studio](https://developer.android.com/studio) for working on your computer.
+
+It's possible that the mobile app might not work on school computers, so if you're on school computers, please use Android Studio instead. I will also be using Android Studio for demonstration purposes.
+
+## Documentation + teaching materials
+
+Official documentation is [here](https://reactnative.dev/docs/getting-started).
+
+Videos I have used for studying this framework are here:
+ 
 [video_1](www.youtube.com/watch?v=VozPNrt-LfE&t)
 
 [video_2](www.youtube.com/watch?v=0-S5a0eXPoc&t)
 
-## Iniciace 
-V své working directory si prosím otevřte command line a napište tam toto:
+## Inicialization
+
+In your working directory in which you would like to develop, please type this into CMD
 
 ```
 npm create-expo-app jmeno_appky
 ```
-Tady máme zapnuté Android Studio
-<img src="https://raw.githubusercontent.com/DanielRiha8906/GUI/main/images/Android.png"/>
-Klikneme na More actions, Virtual device manager 
-<img src="https://raw.githubusercontent.com/DanielRiha8906/GUI/main/images/more_actions.png"/>
-Zmáčkneme play Button
-<img src="https://raw.githubusercontent.com/DanielRiha8906/GUI/main/images/sum.png" />
+Here is how Android studio should look like when you launch it.
 
-## Komponenty
-Teďka začneme již s nějakou tu prací. React Native funguje na bázi komponentů, které se zobrazují jinak pro Android, IOS, web. 
-Dnes budem využívat View, Text, Image a Text Input.
 
-Začneme s nějakým jednoduchým vypsáním na obrazovku. 
+<img src="https://raw.githubusercontent.com/DanielRiha8906/GUI/main/Frontend/images/Android.png">
+
+
+Please click on more actions and manage virtual device
+
+<img src="https://raw.githubusercontent.com/DanielRiha8906/GUI/main/Frontend/images/more_actions.png">
+
+
+Click the "play" button 
+
+
+<img src="https://raw.githubusercontent.com/DanielRiha8906/GUI/main/Frontend/images/sum.png">
+
+
+## Components
+Now let's get started with some work. React Native operates on a component-based system, where components are displayed differently for Android, iOS, and web. Today, we'll be using View, Text, Image, and TextInput components.
+
+Let's start with some simple text rendering on the screen.
 
 ```ts
 import { StatusBar } from 'expo-status-bar';
@@ -63,19 +78,17 @@ const styles = StyleSheet.create({
 export default Ujep;
 
 ```
-Tady máme příklad nějakého jednoduchého 'Hello World' příkladu
+Here is an easy 'Hello World!' type of example.
 
 
-## Proměnné 
-Java script je dynamicky typovaný jazyk. Existují tři typy proměnných. 'var', 'let' a 'const', které se vždy musí deklarovat před tím, než je využijeme.
+## Variables
 
-var - Je vždy globální, dá se redeklarovat, měnit její hodnotu
+JavaScript is a dynamically typed language. There are three types of variables: 'var', 'let', and 'const', which always must be declared before they are used.
 
-let - Je bloková, nedá se redeklarovat a dá se měnit její hodnota
-
-const - Je bloková, nedá se redeklarovat a nedá se měnit její hodnota -> const jako constant 
-
-Teď si dáme ukázku kódu, kde do vypisovaného textu dáme proměnné. 
+var: It is always global, can be redeclared, and its value can be changed.
+let: It is block-scoped, cannot be redeclared, and its value can be changed.
+const: It is block-scoped, cannot be redeclared, and its value cannot be changed -> const as constant.
+Now let's take a look at some code examples where we use variables within the displayed text.
 
 ```ts
 import React from 'react';
@@ -106,11 +119,12 @@ export default Ujep;
 
 ## Use state
 
-Důležitá věc, pro user input, měnění textu, funkčnosti tlačítek a podobně je věc, které se říká use state.
 
-V React Native je "state" objekt, který obsahuje data a určuje, jak se daná komponenta chová a vypadá v určitém čase. Každá komponenta může mít svůj vlastní stav. Stav se používá k uchování dat, která se mohou v průběhu času měnit a ovlivňovat vzhled a chování komponenty.
+An important concept for user input, text changing, button functionality, and similiar functionalities is something called "state."
 
-Použití "state" v React Native je důležité pro vytváření interaktivních uživatelských rozhraní. Když se stav komponenty změní, React automaticky znovu vykreslí komponentu, aby se její vzhled a chování aktualizovaly podle nového stavu.
+In React Native, "state" is an object that holds data and determines how a particular component behaves and looks at a certain time. Each component can have its own state. State is used to store data that may change over time and affect the appearance and behavior of the component.
+
+Using "state" in React Native is important for creating interactive user interfaces. When a component's state changes, React automatically re-renders the component to update its appearance and behavior according to the new state.
 
 ```ts
 import React, { useState } from 'react';
@@ -159,11 +173,12 @@ export default ButtonIncrease;
 
 ```
 
-Důležité věci v tomhle kódu jsou vytvoření hooku use state, vytvoření funkci, které bude tlačítko využít. 
+The important aspects of this code are the creation of the useState hook and the creation of functions that the button will utilize.
 
 ## Text input
 
-Nyní víme jak dělat nějaké jednoduché vypisování na obrazovku, využívat button tak se pojďme pustit do využití text inputu. 
+
+Now that we know how to perform some simple text rendering on the screen and utilize buttons, let's dive into using text input.
 
 ```ts
 import React, { useState } from 'react';
@@ -193,19 +208,20 @@ const ChangeTextApp = () => {
 
 export default ChangeTextApp;
 ```
-## Práce
+## Individual work
 
-Vytvořte si svojí vlastní aplikaci na nějakou jednoduchou klikací hru. 
 
-Budete tam mít text, který bude ukazovat current HP enemáka, a v moment, kdy jeho HP padne pod nulu, tak vyhoďte Alert.
+Create your own application for a simple clicking game.
 
-Aplikace bude mít 3 buttony a 1 text input: Attack!, nastavení HP enemáků a reset hp enemy. 
+You will have a text displaying the current HP of the enemy, and when their HP drops below zero, display an Alert.
+
+The application will have 3 buttons and 1 text input: Attack!, set enemy HP, and reset enemy HP.
 
 
 
 <details>
 <summary>
-Ukázka řešení:
+My solution:
 </summary>
 
 ```ts
@@ -287,29 +303,29 @@ export default EnemyBattleApp;
 ```
 </details>
 
-## Projekt
+## Project
 
-Ok, teďka se pustíme do většího programu, který jsme pro vás připravili. 
+Alright, let's dive into the larger project that we've prepared for you.
 
-Tento projekt bude jednoduchá mobilní aplikace, kde se lidi přihlásí a poté mohou k jednotlivým písničkám přidávat posty ohledně svých vlastní názory na ně.
+This project will be a simple mobile application where users can log in and then add posts regarding their own opinions on various songs.
 
-Tudíž například klasický post by mohl vypadat takto: 
+So, for example, a typical post could look like this:
 
-Pepa má rád od Sex Bob-Omb Garbage truck. 
+"Pepa likes 'Garbage Truck' by Sex Bob-Omb."
 
 ## Login 
 
-Vytvoříme si složku `/app` a vně vytvoříme program index.js
 
-V složce app si prosím vytvořte složku home, kam potom budeme házet soubory s jednotlivými funkcionalitami, jako je `GET, POST a PATCH` method. Bude nám to sloužit i pro to, že budeme na naše menu využívat drawer (šuplík) aka lištu na straně, která bude náš nav bar. Teď si prosím do složky app přidejte soubor `login.js`
+Let's create a folder named /app and inside it, we'll create the program index.js.
 
+Inside the `/app` folder, please create a folder named `home`, where we'll put files for various functionalities such as `GET, POST, and PATCH` methods. This structure will also serve us well for utilizing a drawer menu as our navigation bar. Now, please add a file named `login.js` to the `/app` folder.
 
-V souboru `login.js` bude náš login do aplikace. 
+In the `login.js` file, we'll implement our login functionality for the application.
 
 
 <details>
 <summary>
-Má implementace: 
+My implementation: 
 </summary>
 
   ```ts  
@@ -373,19 +389,20 @@ export default Login;
 
 ```
 
-V tomto kódu si můžete všimnout, jak přistupuji k stránce. vytvořím si konstantu, kam si zapíšu ip naší stránky (Nebude vám to fungovat na stejné IP jako na té mojí, takže so do cmd outletu napište prosím ipconfig a najděte si tu správnou.
+
+In this code, you can notice how I access the page. I will create a constant where I'll store the IP address of our page. Please note that it won't work on the same IP as mine, so please use the `ipconfig` command in your command prompt to find the correct IP address.
 </details>
 
 
 ## Main page
 
-Pojďme udělat hlavní stránku, kam nás to přesměruje po uskutečněném loginu.
+Let's create the main page where we'll be redirected after successful login.
 
-Implementoval bych hlavní stránku tak, že na ní budou vypsány posty od lidí, kde budeme mít username, jméno kapely, písničky a review na samotnou písničku.
+I would implement the main page in such a way that it displays posts from users, containing their username, band name, song, and a review of the song.
 
-Ve složce home si prosím vytvořte soubor `index.js`
+Please create a file named `index.js` in the `home` directory.
 
-V tomto souboru bude useState na data, useEffect, ve kterém budeme dostávat z endpointu /reviews data, které potom vypíšeme na obrazovku.
+In this file, we'll use `useState` for data management and `useEffect` to fetch data from the `/reviews` endpoint, which we'll then display on the screen.
 
 <details>
 <summary>
@@ -442,13 +459,14 @@ const App = () => {
 export default App;
 ```
 
-Vím, tento výpis nevypadá úplně nejlépe, ale počítejte s tímto projektem spíše jako proof of concept. 
+After filling the database with some data, you will see, that it does not look remarkable, so please take this with a grain of salt as a proof of concept. 
+All of this code is open source, so if you'd like to use it in your own project and then just give it a nice "face" go for it. 
 </details>
 
 
 ## Drawer
 
-Víše zmínění šuplík implementujeme v souboru `_layout.js` ve složce `home`. 
+We will implement a drawer in the file `_layout.js` in the `home` folder. 
 
 <details>
 <summary>
@@ -472,7 +490,7 @@ export default function Layout() {
 
 ## POST
 
-Pojďme si teď vytvořit soubor `create.js` v složce `home`, který nám bude vytvářet post samotný. 
+Let's create a file for adding posts to our app. Please create a file  `create.js` in the `home` directory, in which the `POST` method for creating a post will be. 
 
 <details>
 <summary>
@@ -553,13 +571,13 @@ export default Login;
 ## Update
 
 
-Z CRUD operací máme zatím `GET` a `POST`, pojďme vytvořit `UDPATE`.
+Out of the CRUD operations, we currently have `GET` and `POST`. Let's now create `UPDATE`.
 
-Update bude přepisovat jen samotnou recenzi, na danou písničku. Jelikož se asi autor a název písně nezměnil, v backendu je `UPDATE` a `DELETE` realizován pomocí toho, že k samotným příspěvkům se přistupuje pomocí id. Tudíž si budeme muset vytvořit způsob, jak přistupovat k samontým příspěvkům.
+The update operation will only overwrite the review for a specific song. Since the author and song name probably won't change, in the backend, `UPDATE` and `DELETE` are implemented by accessing the posts via their IDs. Therefore, we'll need to create a way to access individual posts.
 
-Což se v našem případě musí realizovat pomocí [dynamického routingu](https://docs.expo.dev/router/create-pages/#dynamic-routes)
+In our case, this needs to be done using [dynamic routing](https://docs.expo.dev/router/create-pages/#dynamic-routes).
 
-Pojďme si tedy vytvořit složku `update` a v ní soubor `[slug].js`
+So let's create a folder named `update`, and inside it, create a file named `[slug].js`.
 
 <details>
 <summary>
@@ -620,7 +638,7 @@ export default Update;
 
 </details>
 
-A teď máme přístup, jak k ním přistupovat, nýbrž to musíme i nějak naimplementovat v samotné aplikaci. Nejjednodušší způsob jak toto udělat je, za každý přidat tlačítko, které je přepošle na tento odkaz. Tudíž prosím, upravte si v souboru `index.js` to view tak, aby se tam renderoval o button navíc, který na zmáčknutí bude mít funkcionalitu toho, že ho to přesměruje sem. 
+Now that we have a way to access individual posts, we need to implement it in the application itself. The simplest way to do this is to add a button for each post that redirects to this link. Therefore, please modify the `index.js` file in a way that it renders an additional button for each post. When clicked, this button should redirect to the corresponding update page.
 
 
 
@@ -691,29 +709,26 @@ export default App;
 </details>
 
 
-## Samostatná práce na konec:
+## Independent work at the end:
 
-Nyní Máme CRU metody, je čas tam přidat i ten `DELETE`. Zkuste tedy prosím pomocí toho všeho, co jsem vám dnes ukázal přidat do této aplikace delete možnost. 
+Now that we have CRUD methods, it's time to add the `DELETE` functionality. Please try to implement the delete option using everything I've shown you today.
 
-Implementaci nechávám čistě na vás. Já jsem například delete možnost přidat do `[slug].js` a poté přidal funkcionalitu na hlavní stránku.
+I leave the implementation entirely up to you. For example, I added the delete option to the `[slug].js` file and then added functionality to the main page.
 
-Tady jako ukázku řešení můžete brát Projekt, který je již postaven v repozitáři UJEP. 
+As an example solution, you can refer to the project already built in the UJEP repository.
 
+## Motivation at the end:
 
-## Motivace na konec:
+If we have time left, I'll show you a project I worked on for Dr. Fišer and Dr. Škvor.
 
+### Assignment:
 
-Zdali nám zbyl čas, tak vám tady ukazuji projekt, který jsem dělal pro pana doktora Fišera a pana doktora Škvora.
+Create a mobile application that supports ad-hoc communication, with two sides - student and teacher.
 
-### Zadání:
+Teacher - on their side, they will have an interface showing which student is present in the class, potentially be able to manually add students and give them a + when they are active. (still a Work in Progress)
 
-Udělat aplikaci na mobil, která bude supportovat ad-hoc komunikaci, kde budou dvě strany - student a učitel.
+Student - logs in using the mobile app and scans the QR code of the chair they are sitting on, which will be recorded in the teacher's database.
 
-Učitel - na své straně bude mít na své straně rozhraní, které bude ukazovat jaký student je přítomen v hodině, bude moct potenciálně manuálně přidávat studenty a dávat jím +, když jsou aktivní. (stále Work in progress)
+[Link to the Repository](https://github.com/DanielRiha8906/APR2_projekt)
 
-Studnet - Se přihlásí pomocí mobilní aplikace a načte si QR kód židle, na které sedí, která se propíše učiteli do databáze. 
-
-[Odkaz na Repo](https://github.com/DanielRiha8906/APR2_projekt)
-
-
-# Děkuji moc za pozornost, užijte si oběd!
+# Thank you very much for your attention, enjoy your lunch!
