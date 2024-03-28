@@ -2,7 +2,7 @@ import { router } from 'expo-router';
 import React, { useState } from 'react';
 import { View, TextInput, Button } from 'react-native';
 
-const Login = () => {
+const Create = () => {
   const [username, setUsername] = useState('');
   const [songName, setSongName] = useState('');
   const [ArtistName, setArtistName] = useState('');
@@ -61,4 +61,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default Create;
